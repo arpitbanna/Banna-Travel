@@ -28,22 +28,39 @@ img{
     display: flex; gap: 1.5rem; }
 .toplinks a {
     color: #fff; 
-    font-weight: 500; }
-.toplinks a.active, .toplinks a:hover { color: #00bcd4; }
+    font-weight: 500;
+    /* padding: 1.2em;
+    border: yellow solid 2px;
+    border-radius: 25px;
+    box-shadow: 2px, 2px, 5px  white ; */
+    transition: 0.1s;
+
+}
+.toplinks a.active, .toplinks a:hover {
+    color: #00bcd4;
+    font-size: 1.2rem;
+
+}
 
 .sec1 {
     height: 80vh; 
     display: flex; 
     justify-content: center; 
     align-items: center;
-    background: url("/assets/traval.jpg") no-repeat center center / cover fixed;
+    background: url("/assets/Gemini_Generated_Image_g7cum0g7cum0g7cu.png") no-repeat center center / cover fixed;
     color: #fff; 
     text-align: center;
 }
 .sec1box1 h1 { 
     font-size: 70px; 
     margin-bottom: 1rem; 
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0);
+    backdrop-filter: blur(1.5px);
+}
+#sec1p{
+    padding: 50px;
+    font-size: 1.3rem ;
+    text-shadow: 2px 2px 2px  #071415;
 }
 .btn {
     display: inline-block; 
@@ -84,7 +101,18 @@ img{
     border-radius: 10px; 
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+.sec2div:hover {
+    background-color: #00e5ff0e;
+    /* width: 110%;
+    height: 110%;
+    z-index: 1;
+    font-size: large;
+    border-image-width: 10%; */
 
+    box-shadow: 2px 2px 5px #071415 ;
+    border: #00000086 solid 2px;    
+
+}
 .sec3{
     padding: 3rem 2rem; 
     text-align: center;
@@ -151,15 +179,29 @@ img{
     border-radius: 10px; 
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
-
-footer {
-    text-align: center; 
-    padding: 1.5rem; 
-    background: #222; 
-    color: #fff; 
-    margin-top: 2rem;
-    
+.img-box{
+    border: #d2e4e5 solid 2px;
+    padding: 10px;
+    border-radius: 25px;
+    /* background-color: #00e5ff0e; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition */
 }
+.img-box:hover {
+    background-color: #00e5ff0e;
+    /* width: 110%;
+    height: 110%;
+    z-index: 1;
+    font-size: large;
+    border-image-width: 10%; */
+    padding: 20px;
+    /* box-shadow: 2px 2px 5px #071415 ; */
+    border: #00000086 solid 2px; 
+    transform: scale(1.01); 
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15); 
+    border-color: #00bcd4; 
+}
+
+
 
 .con1 {
     padding: 50px;
@@ -197,8 +239,11 @@ footer {
     border-radius: 5px; 
     font-size: 1rem;
 }
+/* #message{
+    max-width: fit-content;
+} */
 .btn-con {
-    border: none;
+
     color: black;
     display: inline-block; 
     margin-top: 1rem; 
@@ -215,4 +260,45 @@ footer {
     background: #6cd4db; 
     color: #fff;
     font-size: 22px;
+}
+.visual {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+footer {
+    text-align: center; 
+    padding: 1.5rem; 
+    background: #222; 
+    color: #fff; 
+    margin-top: 2rem;
+    
+}
+
+/* Add this CSS for mobile responsiveness */
+@media (max-width: 768px) {
+  /* This will stack your nav links on mobile */
+  .toplinks {
+    display: none; /* Hide them by default, you'll show them with JavaScript */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* You would add a hamburger icon and use JavaScript to show/hide .toplinks */
+
+  .sec1box1 h1 {
+    font-size: 40px; /* Reduce font size on smaller screens */
+  }
+
+  .pac2box1 {
+    /* Change the grid to a single column on mobile */
+    grid-template-columns: 1fr;
+  }
 }
