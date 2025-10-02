@@ -11,8 +11,24 @@ a {
     text-decoration: none; 
     color: inherit; 
 }
+a:active{
+    transform: scale(1);
+    color: white;
+}
 img{
+    height: 100%;
+    width: 100%;
     border-radius: 12px;
+    transition: all .2s ease;
+
+}
+img:hover{
+    transform: scale(1.05);
+    box-shadow: #071415 2px 2px 5px ;
+    border-radius: 15px;
+}
+img:active{
+    transform: scale(1);
 }
 .topbar {
     display: flex; 
@@ -39,7 +55,6 @@ img{
 .toplinks a.active, .toplinks a:hover {
     color: #00bcd4;
     font-size: 1.2rem;
-
 }
 
 .sec1 {
@@ -101,18 +116,18 @@ img{
     border-radius: 10px; 
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
-.sec2div:hover {
-    background-color: #00e5ff0e;
+/* .sec2div:hover {
+    background-color: #00e5ff0e; */
     /* width: 110%;
     height: 110%;
     z-index: 1;
     font-size: large;
     border-image-width: 10%; */
 
-    box-shadow: 2px 2px 5px #071415 ;
+    /* box-shadow: 2px 2px 5px #071415 ;
     border: #00000086 solid 2px;    
 
-}
+} */
 .sec3{
     padding: 3rem 2rem; 
     text-align: center;
@@ -186,20 +201,20 @@ img{
     /* background-color: #00e5ff0e; */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition */
 }
-.img-box:hover {
-    background-color: #00e5ff0e;
+/* .img-box:hover {
+    background-color: #00e5ff0e; */
     /* width: 110%;
     height: 110%;
     z-index: 1;
     font-size: large;
     border-image-width: 10%; */
-    padding: 20px;
+    /* padding: 20px; */
     /* box-shadow: 2px 2px 5px #071415 ; */
-    border: #00000086 solid 2px; 
+    /* border: #00000086 solid 2px; 
     transform: scale(1.01); 
     box-shadow: 0 8px 15px rgba(0,0,0,0.15); 
     border-color: #00bcd4; 
-}
+} */
 
 
 
